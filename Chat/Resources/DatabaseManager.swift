@@ -20,16 +20,17 @@ final class DatabaseManager {
 
 extension DatabaseManager{
     
-    public func userExists(with email: String, completion: @escaping ((Bool) -> Void)) {
+    
+  public func userExists(with email: String, completion: @escaping ((Bool) -> Void)) {
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
-        database.child(safeEmail).observeSingleEvent(of: .value, with: { snapshot in
-            guard snapshot.value as? String != nil else {
-                completion(false)
-                return
-            }
-            completion(true)
-        })
+      database.child(safeEmail).observeSingleEvent(of: .value, with: { snapshot in
+          guard snapshot.value as? String != nil else {
+              completion(false)
+              return
+          }
+          completion(true)
+      })
     }
     
     /// insert new user to database

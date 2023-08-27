@@ -26,7 +26,7 @@
 		965E22932A9B23B9003386A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E22912A9B23B8003386A6 /* Extensions.swift */; };
 		965E22942A9B23B9003386A6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E22922A9B23B9003386A6 /* DatabaseManager.swift */; };
 		965E22962A9B2542003386A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 965E22952A9B2542003386A6 /* GoogleService-Info.plist */; };
-		D144D13DC8E20604C09E9FC6 /* Pods_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1976DD8F16F1C4808BDB0584 /* Pods_Chat.framework */; };
+		96914E202A9B581700719FE9 /* Pods_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1976DD8F16F1C4808BDB0584 /* Pods_Chat.framework */; };
 		F1F233C9EB78BD0F79AE91BA /* Pods_ChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F686E5DBCEB95C536456C46 /* Pods_ChatTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D144D13DC8E20604C09E9FC6 /* Pods_Chat.framework in Frameworks */,
+				96914E202A9B581700719FE9 /* Pods_Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,11 +665,14 @@
 				DEVELOPMENT_TEAM = 4WNS3YRYTX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please Allow";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please Allow";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,11 +697,14 @@
 				DEVELOPMENT_TEAM = 4WNS3YRYTX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please Allow";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please Allow";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -194,7 +194,7 @@ else {
         }
         
         DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
-            
+            print("\(exists)")
             guard let strongSelf = self else {
                 return
             }
@@ -205,8 +205,8 @@ else {
             }
             
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult,error in
-                guard authResult !== nil, error == nil else {
-                    print("false")
+                guard authResult != nil, error == nil else {
+                    strongSelf.alertUserRegisterError(message: "Look like a user account for that email address already exists.")
                     return
                 }
                 
