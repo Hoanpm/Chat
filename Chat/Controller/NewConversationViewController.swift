@@ -16,7 +16,6 @@ class NewConversationViewController: UIViewController {
         searchBar.placeholder = "Search for Users..."
         return searchBar
     }()
-    
     private let tableView: UITableView = {
         let table = UITableView()
         table.isHidden = true
@@ -41,6 +40,7 @@ class NewConversationViewController: UIViewController {
         navigationController?.navigationBar.topItem?.titleView = searchBar
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done,
                                                            target: self, action: #selector(dismissSelf))
+        searchBar.becomeFirstResponder()
     }
     
     @objc
