@@ -21,17 +21,14 @@ final class StorageManager {
                                      completion: @escaping UploadPictureCompletion) {
         storage.child("image/\(fileName)").putData(data, metadata : nil, completion : { metadata, error in
             guard error == nil else {
-                print("false1")
                 completion(.failure(StorageErrors.failedToUpload))
                 return 
             }
             self.storage.child("image/\(fileName)").downloadURL(completion: { url, error in
                 guard let url = url else {
-                    print("false2")
                     completion(.failure(StorageErrors.failedToGetDownloadUrl))
                     return
                 }
-                print("3")
                 let urlString = url.absoluteString
                 completion(.success(urlString))
                 

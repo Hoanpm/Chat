@@ -10,6 +10,9 @@ import JGProgressHUD
 
 
 class NewConversationViewController: UIViewController {
+    
+    public var completion : (([String : String]) -> (Void))?
+    
     private let spinner = JGProgressHUD(style: .dark)
 
     private var users = [[String : String]]()
@@ -83,17 +86,22 @@ extension NewConversationViewController : UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //start conversation
+        let targetUserData = results[indexPath.row]
+        dismiss(animated: true, completion: { [weak self] in
+            self?.completion?(targetUserData)
+        })
     }
     
 }
 
 extension NewConversationViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    
+    
+     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text, !text.replacingOccurrences(of: " ", with: "").isEmpty else {
             return
         }
-        searchBar.resignFirstResponder() 
+        searchBar.resignFirstResponder()
         results.removeAll()
         spinner.show(in: view)
         
@@ -122,14 +130,13 @@ extension NewConversationViewController : UISearchBarDelegate {
             return
         }
         self.spinner.dismiss()
-        var results : [[String : String]] = self.users.filter({
+        let results : [[String : String]] = self.users.filter({
             guard let name = $0["name"]?.lowercased() else {
                 return false
             }
             return name.hasPrefix(term.lowercased())
         })
-        self.results = results
-        
+        self.results = results 
         updateUI()
     }
     func updateUI() {
