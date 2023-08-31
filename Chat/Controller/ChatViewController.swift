@@ -103,7 +103,7 @@ class ChatViewController: MessagesViewController {
             switch result {
             
             case .success(let messages):
-               print("\(messages)")
+
                 guard !messages.isEmpty else {
                     return
                 }
@@ -139,14 +139,18 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
               let messageid = createMessageId() else {
             return
         }
+        
+        let mmessage = Message(sender: selfSender,
+                               messageId: messageid ,
+                               sentDate: Date(),
+                               kind: .text(text))
+        
         if isNewConversation {
-            let mmessage = Message(sender: selfSender,
-                                   messageId: messageid ,
-                                   sentDate: Date(),
-                                   kind: .text(text))
-            DatabaseManager.shared.createNewConversation(with: otherUserEmail,name: self.title ?? "User" ,firstMessage: mmessage, completion: { success in
+            
+            DatabaseManager.shared.createNewConversation(with: otherUserEmail,name: self.title ?? "User" ,firstMessage: mmessage, completion: { [weak self] success in
                 if success {
                     print("message send")
+                    self?.isNewConversation = false
                 }
                 else {
                     print("false")
@@ -154,7 +158,17 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
             })
         }
         else {
-            
+            guard let conversationId = conversationId,let name = self.title else {
+                return
+            }
+            DatabaseManager.shared.sendMessage(to: conversationId, otherUserEmail: otherUserEmail,name:name ,newMessage: mmessage, completion: {success in
+                if success {
+                    print("sent")
+                }
+                else {
+                    print("false")
+                }
+            })
         }
     }
 private func createMessageId() -> String? {
