@@ -1,5 +1,5 @@
 # Chat ![Ảnh màn hình 1445-02-09 lúc 3 56 06 CH](https://github.com/Hoanpm/Chat/assets/98281111/fb285045-6cc6-4a84-8bdc-71b82e773a84)
-Chat App là một ứng dụng di động trên Iphone cho phép người dùng giao tiếp và trò chuyện với nhau thông qua tin nhắn văn bản, âm thanh hoặc hình ảnh. Tôi làm app này nhằm mục đích học tập về Ios
+  Chat App is a mobile application on the iPhone that enables users to communicate and chat with each other through text messages, audio, or images. I developed this app for the purpose of learning about iOS.
 ## Installation Guide:
   ### Using Xcode:
   Xcode is an integrated development environment (IDE) developed by Apple. It provides tools and resources for developing applications for Apple platforms such as iOS, macOS, watchOS, and tvOS.
