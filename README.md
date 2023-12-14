@@ -1,18 +1,18 @@
 # Chat ![Ảnh màn hình 1445-02-09 lúc 3 56 06 CH](https://github.com/Hoanpm/Chat/assets/98281111/fb285045-6cc6-4a84-8bdc-71b82e773a84)
-Chat App là một ứng dụng di động hoặc máy tính cho phép người dùng giao tiếp và trò chuyện với nhau thông qua tin nhắn văn bản, âm thanh hoặc hình ảnh. Tôi làm app này nhằm mục đích học tập về Ios
-## Cách cài đặt:
-  ### Sử dụng Xcode:
-  Xcode là một môi trường phát triển tích hợp (IDE) được phát triển bởi Apple. Nó cung cấp các công cụ và tài nguyên để phát triển ứng dụng cho các nền tảng của Apple như iOS, macOS, watchOS và tvOS.
-## Công Nghệ sử dụng:
+Chat App là một ứng dụng di động trên Iphone cho phép người dùng giao tiếp và trò chuyện với nhau thông qua tin nhắn văn bản, âm thanh hoặc hình ảnh. Tôi làm app này nhằm mục đích học tập về Ios
+## Installation Guide:
+  ### Using Xcode:
+  Xcode is an integrated development environment (IDE) developed by Apple. It provides tools and resources for developing applications for Apple platforms such as iOS, macOS, watchOS, and tvOS.
+## Technologies Used:
   ### Swift & UIkit:
-  Swift là một ngôn ngữ lập trình hiện đại và mạnh mẽ được phát triển bởi Apple. Nó được thiết kế để dễ đọc, viết và bảo trì, đồng thời cung cấp hiệu suất và tính an toàn. Swift được sử dụng để phát triển ứng dụng trên nhiều nền tảng của Apple, bao gồm iOS, macOS, watchOS và tvOS.
-  UIKit là một framework do Apple cung cấp để xây dựng giao diện người dùng trong các ứng dụng iOS và tvOS. Nó cung cấp một bộ các thành phần giao diện người dùng đã được xây dựng sẵn, chẳng hạn như buttons, labels, text fields và views, mà các nhà phát triển có thể sử dụng để tạo ra giao diện hấp dẫn và tương tác.
+  Swift is a modern and powerful programming language developed by Apple. It is designed to be easy to read, write, and maintain while providing performance and safety. Swift is used to develop applications across various Apple platforms, including iOS, macOS, watchOS, and tvOS.
+  UIKit is a framework provided by Apple for building user interfaces in iOS and tvOS applications. It offers a set of pre-built user interface components such as buttons, labels, text fields, and views that developers can use to create attractive and interactive interfaces.
   ### CocoaPods:
-  CocoaPods là một trình quản lý thư viện cho Swift và Objective-C, giúp đơn giản hóa quá trình cài đặt và cập nhật các thư viện bên thứ ba vào dự án iOS. Nó cho phép nhà phát triển dễ dàng tìm kiếm, cài đặt và quản lý các thư viện phổ biến như Firebase trong dự án của mình.
+  CocoaPods is a library manager for Swift and Objective-C, simplifying the process of installing and updating third-party libraries in iOS projects. It allows developers to easily search, install, and manage popular libraries like Firebase in their projects.
   ### Firebase Realtime Database:
-  Firebase Realtime Database là một dịch vụ cơ sở dữ liệu thời gian thực do Google cung cấp. Nó cung cấp một cơ sở dữ liệu đám mây cho phép đồng bộ dữ liệu giữa các thiết bị trong thời gian thực. Firebase Realtime Database sử dụng giao thức WebSocket để duy trì kết nối liên tục giữa ứng dụng và cơ sở dữ liệu, cho phép dữ liệu được truyền đi và nhận lại một cách nhanh chóng và tức thì.
-Sử dụng Firebase Realtime Database trong Chat App giúp tạo ra một môi trường truyền thông thời gian thực, cho phép người dùng gửi và nhận tin nhắn ngay lập tức. Khi một tin nhắn mới được gửi từ một thiết bị, nó sẽ tức thì được cập nhật trên tất cả các thiết bị khác đang kết nối vào cùng một cơ sở dữ liệu.
-## Một số hình ảnh của dự án(Vẫn đang được phát triển)
+  Firebase Realtime Database is a real-time database service provided by Google. It offers a cloud-based database that allows data synchronization across devices in real-time. Firebase Realtime Database uses the WebSocket protocol to maintain a continuous connection between the app and the database, enabling data to be transmitted quickly and instantly.
+  Using Firebase Realtime Database in Chat App creates a real-time communication environment, allowing users to send and receive messages instantly. When a new message is sent from one device, it is instantly updated on all other devices connected to the same database.
+## Project Screenshots (Still in Development):
   ### Login:
 ![Simulator Screenshot - iPhone 14 - 2023-08-31 at 23 50 42](https://github.com/Hoanpm/Chat/assets/98281111/f7f268b4-5148-4cc6-bd8e-df61fb8ef713)
   ### Register and choose avatar:
